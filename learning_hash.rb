@@ -2,15 +2,52 @@
 
 class LearningHash
   def foo_key(hash)
-    # your code here
+    hash[:foo]
   end
 
   def bar_key(hash)
-    # your code here
+    hash[:bar]
   end
 
   def key_stringer(hash)
-    # your code here
-    # hint see http://ruby-doc.org/core-2.1.5/Hash.html#method-i-each_key
+    result = ''
+    hash.each_key do |key|
+      result << key.to_s
+    end
+    result
   end
+
+  def value_stringer(hash)
+    result = ''
+    hash.each_value do |value|
+      result << value.to_s
+    end
+    result
+  end
+
+  def key_and_value_stringer(hash)
+    result = ''
+    hash.each do |key, value|
+      result << key.to_s + value.to_s
+    end
+    result
+  end
+
+  def reversed_key_and_value_stringer(hash)
+    #result = ''
+    #hash.each do |key, value|
+    #  result << key.to_s + value.to_s
+    #end
+    #result.reverse
+    key_and_value_stringer(hash).reverse
+  end
+
+  def polite_is_empty?(hash)
+    if hash.empty?
+      "Yes ma'am"
+    else
+      "No ma'am"
+    end
+  end
+
 end
