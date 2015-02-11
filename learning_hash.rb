@@ -43,7 +43,7 @@ class LearningHash
   end
 
   def polite_is_empty?(hash)
-    if hash.empty?
+    if hash.size = 0
       "Yes ma'am"
     else
       "No ma'am"
